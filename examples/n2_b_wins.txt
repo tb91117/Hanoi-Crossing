@@ -1,0 +1,11 @@
+# N=2 example — B moves their disks (4 and 2) to pole 3b.
+# Classic 3-peg Tower of Hanoi: use shared pole 2 as auxiliary.
+# After the last place, shared pole is empty → B wins.
+
+turns: B B B B B B
+B lift 1
+B place 2
+B lift 1
+B place 3
+B lift 2
+B place 3

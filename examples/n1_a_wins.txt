@@ -1,0 +1,7 @@
+# N=1 example from the spec.
+# Player A wins in three turns.
+
+turns: A B A
+A lift 1
+B lift 1
+A place 3
