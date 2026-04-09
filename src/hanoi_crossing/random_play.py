@@ -1,24 +1,3 @@
-"""
-Random-play CLI frontend for Hanoi Crossing.
-
-Both players choose uniformly at random from their legal actions each turn.
-Turn order defaults to strict alternation (A, B, A, B, …) but can be
-overridden with --turns.
-
-Usage
------
-    uv run hanoi-random <n> [--max-turns N] [--seed S] [--turns A,B,A,B,...]
-
-Options
--------
-    n               Number of disks per player (required, positional).
-    --max-turns N   Stop after N turns even without a winner (default 10000).
-    --seed S        RNG seed for reproducible games (default: no seed).
-    --turns T       Comma-separated turn order, cycled as needed
-                    (default: alternating A,B).
-    --quiet         Suppress the per-step move log; only print final state.
-"""
-
 from __future__ import annotations
 
 import argparse

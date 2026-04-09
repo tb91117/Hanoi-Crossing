@@ -1,31 +1,3 @@
-"""
-Hanoi Crossing — core game engine.
-
-Board layout
-------------
-        1a
-        |
- 1b -- [2] -- 3b
-        |
-        3a
-
-Player A sees: 1a – 2 – 3a   (poles numbered 1, 2, 3 from A's perspective)
-Player B sees: 1b – 2 – 3b   (poles numbered 1, 2, 3 from B's perspective)
-
-Pole stacks are stored bottom-to-top: index 0 is the largest (bottom) disk,
-last element is the smallest (top) disk that can be lifted.
-
-Design decisions
-----------------
-- GameState is a frozen dataclass; poles are stored as tuples for immutability.
-- Actions are plain frozen dataclasses (Lift, Place, Skip).
-- `apply` never raises on invalid input; it returns (state, False) so callers
-  can log illegal moves without try/except.
-- Win check runs after every legal action for BOTH players.  A player's visible
-  set includes the shared pole, so pole 2 must be empty for either player to win.
-- Turn order is entirely external; the engine does not track whose turn it is.
-"""
-
 from __future__ import annotations
 
 from dataclasses import dataclass

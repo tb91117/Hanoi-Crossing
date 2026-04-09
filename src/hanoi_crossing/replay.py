@@ -1,37 +1,3 @@
-"""
-Replay CLI frontend for Hanoi Crossing.
-
-Usage
------
-    uv run hanoi-replay <n> <replay-file>
-
-Replay file format
-------------------
-Lines starting with '#' and blank lines are ignored.
-
-The first non-comment line must declare the turn order:
-
-    turns: A B A B A
-
-Following lines each describe one action, in the same order as the turn list:
-
-    <PLAYER> lift   <pole>
-    <PLAYER> place  <pole>
-    <PLAYER> skip
-
-Where <pole> is the player-relative pole number (1, 2, or 3).
-Player-relative pole numbers are mapped to internal ids:
-  A: 1 → 1a, 2 → 2, 3 → 3a
-  B: 1 → 1b, 2 → 2, 3 → 3b
-
-Example (N=1 from the spec)
----------------------------
-    turns: A B A
-    A lift 1
-    B lift 1
-    A place 3
-"""
-
 from __future__ import annotations
 
 import sys
