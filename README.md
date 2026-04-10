@@ -141,13 +141,3 @@ accepts any player on any call. The caller supplies the turn sequence.
 Defaults to strict alternation (A, B, A, B, …) via `itertools.cycle`. Any
 custom sequence can be supplied with `--turns`, and it is also cycled.
 
-## AI disclosure
-
-This project was built with the assistance of **Claude Sonnet 4.6** via the
-Claude Code CLI. The AI was used for:
-
-- Generating the initial implementation plan and architecture
-- Writing all source files (engine, CLIs, tests) from the plan
-- Debugging the one test assertion error caught by the test run
-
-All code was reviewed and the design decisions are the author's own.
